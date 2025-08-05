@@ -1,0 +1,36 @@
+graph LR
+    subgraph System
+        subgraph Quản lý tài khoản
+            UC1[Đăng ký tài khoản]
+            UC2[Đăng nhập/Đăng xuất]
+            UC3[Quản lý thông tin cá nhân]
+        end
+        subgraph Quản lý thu chi
+            UC4[Thêm giao dịch]
+            UC5[Sửa giao dịch]
+            UC6[Xóa giao dịch]
+            UC7[Quản lý danh mục]
+        end
+        subgraph Xem báo cáo
+            UC8[Xem báo cáo tổng quan]
+            UC9[Xem báo cáo chi tiết]
+        end
+    end
+
+    Actor(Người dùng) --> UC1
+    Actor --> UC2
+    Actor --> UC3
+    Actor --> UC4
+    Actor --> UC5
+    Actor --> UC6
+    Actor --> UC7
+    Actor --> UC8
+    Actor --> UC9
+
+    UC2 -- extends --> UC3
+    UC2 -- extends --> UC4
+    UC2 -- extends --> UC5
+    UC2 -- extends --> UC6
+    UC2 -- extends --> UC7
+    UC2 -- extends --> UC8
+    UC2 -- extends --> UC9

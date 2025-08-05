@@ -1,0 +1,28 @@
+erDiagram
+    Users ||--o{ Categories : "quản lý"
+    Users ||--o{ Transactions : "sở hữu"
+    Categories ||--o{ Transactions : "phân loại"
+
+    Users {
+        int UserID PK
+        string Username
+        string Password
+        string FullName
+        string Email
+    }
+
+    Categories {
+        int CategoryID PK
+        string CategoryName
+        int UserID FK
+        string Type "Thu/Chi"
+    }
+
+    Transactions {
+        int TransactionID PK
+        int UserID FK
+        int CategoryID FK
+        decimal Amount
+        string Description
+        datetime TransactionDate
+    }
