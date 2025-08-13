@@ -6,16 +6,17 @@
     padding-right: 15px;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .body-content {
         padding: 0;
     }
+}
+
+.footer {
+    background-color: #343a40; /* Màu nền footer */
+    color: white; /* Màu chữ footer */
+    border-top-left-radius: 15px; /* Bo tròn góc trên trái */
+    border-top-right-radius: 15px; /* Bo tròn góc trên phải */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
 }
