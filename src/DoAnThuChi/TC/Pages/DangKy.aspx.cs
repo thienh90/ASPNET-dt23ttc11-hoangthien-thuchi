@@ -25,16 +25,18 @@ namespace TC.Pages
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
+            lblMessage.Visible = false;
             var user = new Users();
             user.Username = txtUsername.Text.ToLower();
             user.FullName = txtFullName.Text;
             user.Password = txtPassword.Text;
             user.Email = txtEmail.Text;
-            _userRepo.Add(user);
+            _userRepo.Upsert(user);
             _uow.Commit();
             // Hiển thị thông báo đăng ký thành công
             lblMessage.Text = "Đăng ký thành công!";
             lblMessage.CssClass = "text-success";
+            lblMessage.Visible = true;
             // Xóa các trường nhập liệu
             txtUsername.Text = string.Empty;
             txtFullName.Text = string.Empty;

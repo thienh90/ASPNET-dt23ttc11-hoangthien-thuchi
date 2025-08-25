@@ -128,6 +128,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Pages\BangDieuKhien.aspx" />
     <Content Include="Pages\DangKy.aspx" />
     <Content Include="Pages\DangNhap.aspx" />
     <Content Include="Pages\DanhMuc.aspx" />
@@ -199,6 +200,13 @@
       <DependentUpon>202508051647413_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Pages\BangDieuKhien.aspx.cs">
+      <DependentUpon>BangDieuKhien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\BangDieuKhien.aspx.designer.cs">
+      <DependentUpon>BangDieuKhien.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\DangKy.aspx.cs">
       <DependentUpon>DangKy.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

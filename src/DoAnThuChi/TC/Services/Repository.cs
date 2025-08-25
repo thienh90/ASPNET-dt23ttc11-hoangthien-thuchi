@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using TC.Services.Context;
@@ -11,7 +12,7 @@ namespace TC.Services
     {
         TEntity GetById(int id);
         IEnumerable<TEntity> GetAll();
-        void Add(TEntity entity);
+        void Upsert(TEntity entity);
         void Remove(TEntity entity);
         IQueryable<TEntity> Filter();
     }
@@ -24,11 +25,6 @@ namespace TC.Services
         {
             _dbContext = dbContext;
             _dbSet = _dbContext.Set<TEntity>();
-        }
-
-        public void Add(TEntity entity)
-        {
-            _dbSet.Add(entity);
         }
 
         public IEnumerable<TEntity> GetAll()
@@ -45,6 +41,11 @@ namespace TC.Services
         {
             // Có thể cần tùy chỉnh cho các Entity không có khóa tên là 'Id'
             return _dbSet.Find(id);
+        }
+
+        public void Upsert(TEntity entity)
+        {
+            _dbSet.AddOrUpdate(entity);
         }
 
         public void Remove(TEntity entity)
