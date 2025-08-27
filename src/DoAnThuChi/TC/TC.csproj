@@ -133,6 +133,7 @@
     <Content Include="Pages\DangNhap.aspx" />
     <Content Include="Pages\DanhMuc.aspx" />
     <Content Include="Pages\Phieu.aspx" />
+    <Content Include="Pages\ThemPhieu.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -199,6 +200,10 @@
     <Compile Include="Migrations\202508051647413_InitialCreate.Designer.cs">
       <DependentUpon>202508051647413_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202508271504115_Add_Relationship.cs" />
+    <Compile Include="Migrations\202508271504115_Add_Relationship.Designer.cs">
+      <DependentUpon>202508271504115_Add_Relationship.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pages\BangDieuKhien.aspx.cs">
       <DependentUpon>BangDieuKhien.aspx</DependentUpon>
@@ -234,6 +239,13 @@
     </Compile>
     <Compile Include="Pages\Phieu.aspx.designer.cs">
       <DependentUpon>Phieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ThemPhieu.aspx.cs">
+      <DependentUpon>ThemPhieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ThemPhieu.aspx.designer.cs">
+      <DependentUpon>ThemPhieu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Services\Context\TCDbContext.cs" />
     <Compile Include="Services\Models\Categories.cs" />
@@ -309,6 +321,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202508051647413_InitialCreate.resx">
       <DependentUpon>202508051647413_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202508271504115_Add_Relationship.resx">
+      <DependentUpon>202508271504115_Add_Relationship.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
