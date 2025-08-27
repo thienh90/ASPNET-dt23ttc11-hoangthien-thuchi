@@ -13,5 +13,41 @@ namespace TC.Pages
 
     public partial class BangDieuKhien
     {
+
+        /// <summary>
+        /// litCurrentBalance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litCurrentBalance;
+
+        /// <summary>
+        /// litMonthlyIncome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litMonthlyIncome;
+
+        /// <summary>
+        /// litMonthlyExpense control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litMonthlyExpense;
+
+        /// <summary>
+        /// litMonthlyTransactions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litMonthlyTransactions;
     }
 }
